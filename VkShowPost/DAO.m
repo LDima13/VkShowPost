@@ -100,8 +100,8 @@
 - (void)getPortionOffset:(NSInteger)offset completion:(void (^)(NSError * _Nullable error))completion
 {
     // поскольку в мойе тестовой стене нет записей, использую чужую:)
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.vk.com/method/wall.get?owner_id=%@&access_token=%@&v=5.92&offset=%ld&count=%@&extended=1&fields=first_name,last_name,id,users", @"-60750833", self.access_token, offset, @"10"]];
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.vk.com/method/wall.get?access_token=%@&v=5.92&offset=%ld&count=%@", self.access_token, offset, @"6"]];
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.vk.com/method/wall.get?owner_id=%@&access_token=%@&v=5.92&offset=%ld&count=%@&extended=1&fields=first_name,last_name,id,users", @"-60750833", self.access_token, offset, @"10"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.vk.com/method/wall.get?access_token=%@&v=5.92&offset=%ld&count=%@", self.access_token, offset, @"6"]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:45];
     request.HTTPMethod = @"GET";
     
