@@ -10,6 +10,7 @@
 @implementation UIImageView (WebCacheWithActivityIndicator)
 
 @dynamic url;
+@dynamic urlBlank;
 
 - (void) setImageAndActivityIndicatorWithURL:(nullable NSURL *)url
 {

@@ -25,7 +25,10 @@
 @implementation LoginViewController
 
 
+#warning ! Set in APP_ID you VK-Application ID !
 static NSString * const APP_ID = @"6909479";
+
+
 static NSString * const PAGE_OK = @"https://oauth.vk.com/blank.html";
 
 - (void) viewDidLoad
